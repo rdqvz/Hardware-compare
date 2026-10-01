@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hardware Compare: CPUs, GPUs, RAM, SSD, NVMe, HD, fontes, placas-mãe, coolers, mouses, teclados e monitores separados por uso diário, custo-benefício e alta performance.">
+<title>Hardware Compare — PC por peça</title>
+<style>
+:root{--bg:#060606;--panel:#0d0d0d;--panel2:#151515;--red:#e50914;--red2:#ff3742;--text:#fff;--muted:#aaa;--line:#292929;--soft:#18090b;--green:#35d07f;--yellow:#f4c430}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 50% -12%,#47080d 0,#150607 25%,#050505 70%)}
+a{color:inherit}.container{width:min(1280px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.9);backdrop-filter:blur(15px);border-bottom:1px solid #2b0b0d}
+.nav{height:70px;display:flex;justify-content:space-between;align-items:center;gap:18px}.logo{font-weight:1000;letter-spacing:.2px}.logo b{color:var(--red2)}
+nav{display:flex;gap:17px;overflow:auto}nav a{color:#bdbdbd;text-decoration:none;font-size:.82rem;font-weight:800;white-space:nowrap}nav a:hover{color:#fff}
+.hero{text-align:center;padding:66px 0 35px}.pill{display:inline-block;padding:8px 13px;border-radius:999px;border:1px solid #69161b;background:#1a0809;color:#ffd4d7;font-weight:900;font-size:.72rem;letter-spacing:1px}
+.hero h1{font-size:clamp(2.4rem,6vw,5rem);line-height:.98;letter-spacing:-3px;margin:18px auto;max-width:1050px}.grad{background:linear-gradient(90deg,#fff,#ff4b55,#e50914);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:820px;margin:auto;color:var(--muted);line-height:1.7}
+.stickytools{position:sticky;top:70px;z-index:30;padding:13px 0;background:rgba(6,6,6,.92);backdrop-filter:blur(10px);border-bottom:1px solid #1e1e1e}.tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}.tools input,.tools select{background:#0b0b0b;color:#fff;border:1px solid var(--line);padding:12px 13px;border-radius:12px;outline:none;font:inherit}.tools input:focus,.tools select:focus{border-color:var(--red)}
+.catalog-nav{display:flex;gap:9px;overflow:auto;padding:20px 0 4px}.cat-btn{background:#0e0e0e;color:#bbb;border:1px solid #292929;border-radius:999px;padding:9px 13px;font-weight:900;font-size:.76rem;white-space:nowrap;cursor:pointer}.cat-btn:hover,.cat-btn.active{background:#1b0709;color:#fff;border-color:#8c171e}
+.section{padding-top:28px;scroll-margin-top:145px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:24px 0 12px}.section-title h2{margin:0;font-size:1.75rem}.section-title p{margin:0;color:#8f8f8f;font-size:.82rem}.count{color:#ff6a72;font-weight:1000}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.lane{border:1px solid var(--line);background:rgba(12,12,12,.82);border-radius:22px;overflow:hidden}.lane-head{padding:16px 17px;background:linear-gradient(180deg,#19080a,#0f0f0f);border-bottom:1px solid #2b2b2b}.lane-head h3{margin:0 0 4px;font-size:1rem}.lane-head small{color:#999}.lane-body{padding:12px;display:grid;gap:12px;max-height:900px;overflow:auto}.lane-body::-webkit-scrollbar{width:7px}.lane-body::-webkit-scrollbar-thumb{background:#641118;border-radius:99px}
+.card{border:1px solid #2f2f2f;border-radius:17px;background:linear-gradient(145deg,#171717,#090909);overflow:hidden;transition:.18s}.card:hover{transform:translateY(-3px);border-color:var(--red);box-shadow:0 16px 45px rgba(229,9,20,.10)}
+.media{height:145px;background:radial-gradient(circle at 50% 35%,#381114,#0b0b0b 68%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.media img{width:100%;height:100%;object-fit:contain;padding:14px}.art{font-size:2.7rem;filter:drop-shadow(0 6px 12px rgba(229,9,20,.35))}.media .label{position:absolute;bottom:8px;left:9px;right:9px;text-align:center;color:#ff9298;font-weight:1000;font-size:.7rem;letter-spacing:.7px;text-transform:uppercase}
+.body{padding:15px}.brand{font-size:.69rem;text-transform:uppercase;letter-spacing:1.3px;color:#ff6871;font-weight:1000}.body h4{margin:5px 0 9px;font-size:1.08rem}.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:.65rem;border:1px solid #4b171a;background:#19090b;color:#ffb1b6;padding:5px 7px;border-radius:99px;font-weight:800}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:11px 0}.spec{border:1px solid #222;background:#0b0b0b;border-radius:9px;padding:7px;font-size:.66rem;color:#888}.spec b{display:block;color:#fff;font-size:.77rem;margin-top:2px}.buy{display:flex;justify-content:space-between;align-items:end;gap:10px;border-top:1px solid #242424;margin-top:10px;padding-top:11px}.price{font-weight:1000;font-size:1rem}.price small{display:block;color:#777;font-size:.6rem;font-weight:600}.src{color:#ff7078;font-size:.62rem;text-decoration:none}.src:hover{text-decoration:underline}.desc{color:#949494;font-size:.7rem;line-height:1.4;margin-top:9px}
+.table-wrap{margin:42px 0;background:rgba(13,13,13,.9);border:1px solid var(--line);border-radius:22px;padding:18px;overflow:auto}table{border-collapse:collapse;width:100%;min-width:1200px}th,td{text-align:left;padding:11px;border-bottom:1px solid #252525;font-size:.76rem}th{color:#ffb0b5;background:#160708;position:sticky;top:0}.dim{color:#929292}
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 55px}.box{border:1px solid var(--line);border-radius:17px;background:#0d0d0d;padding:18px}.box h3{margin:0 0 8px}.box p{margin:0;color:#999;line-height:1.65;font-size:.85rem}
+footer{border-top:1px solid #2b0b0d;padding:30px 0;color:#777;font-size:.72rem;line-height:1.65}.empty{padding:30px;text-align:center;color:#777;border:1px dashed #2b2b2b;border-radius:15px}
+
+.builder{margin:38px 0 54px;border:1px solid #3a1115;border-radius:24px;background:linear-gradient(145deg,#160708,#090909);box-shadow:0 25px 80px rgba(229,9,20,.10);overflow:hidden}.builder-head{padding:24px 24px 18px;background:linear-gradient(180deg,#20090b,#120606);border-bottom:1px solid #351115}.builder-head h2{margin:0 0 7px;font-size:1.65rem}.builder-head p{margin:0;color:#9b9b9b;line-height:1.6;font-size:.86rem}.builder-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:18px;padding:18px}.builder-controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pick{border:1px solid #2a2a2a;background:#0c0c0c;border-radius:16px;padding:12px}.pick label{display:flex;justify-content:space-between;gap:8px;color:#ff8b92;font-weight:900;font-size:.72rem;margin-bottom:7px}.pick select{width:100%;background:#111;color:#fff;border:1px solid #2b2b2b;border-radius:10px;padding:10px;font:inherit;font-size:.78rem;outline:none}.pick select:focus{border-color:var(--red)}.build-side{display:grid;gap:12px}.summary{border:1px solid #2a2a2a;background:#0b0b0b;border-radius:18px;padding:16px}.summary h3{margin:0 0 12px}.powerline{display:flex;align-items:center;justify-content:space-between;gap:12px}.watts{font-size:2rem;font-weight:1000}.meter{height:11px;background:#202020;border-radius:99px;overflow:hidden;margin:10px 0 8px}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff4c55,#e50914);transition:.25s}.muted{color:#858585;font-size:.72rem}.checks{display:grid;gap:8px;margin-top:12px}.check{border:1px solid #282828;border-left:4px solid #444;border-radius:10px;padding:9px 10px;color:#b5b5b5;font-size:.72rem;line-height:1.45;background:#0f0f0f}.check.ok{border-left-color:var(--green);color:#d5f7e4}.check.warn{border-left-color:var(--yellow);color:#fff0b0}.check.bad{border-left-color:var(--red2);color:#ffc0c4}.total{display:flex;align-items:end;justify-content:space-between;gap:12px}.total strong{font-size:1.45rem}.build-actions{display:flex;gap:9px;flex-wrap:wrap}.btn{cursor:pointer;border:1px solid #5c161b;background:#1a0709;color:#fff;border-radius:10px;padding:9px 12px;font-weight:900;font-size:.72rem}.btn:hover{border-color:var(--red);background:#25090c}.builder-note{padding:0 18px 18px;color:#777;font-size:.68rem;line-height:1.55}.build-chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.chip{border:1px solid #352022;border-radius:999px;padding:5px 8px;color:#bbb;background:#0d0d0d;font-size:.65rem}.compat-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.compat-badge{font-weight:1000;font-size:.72rem;padding:5px 9px;border-radius:99px;border:1px solid #333}.compat-badge.ok{color:#9df0bd;border-color:#24633e;background:#0a1a10}.compat-badge.bad{color:#ffb4ba;border-color:#6d151c;background:#1c0709}
+@media(max-width:1000px){.builder-grid{grid-template-columns:1fr}.builder-controls{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.builder-controls{grid-template-columns:1fr}.watts{font-size:1.65rem}}
+
+@media(max-width:1000px){.lanes,.guide{grid-template-columns:1fr}.tools{grid-template-columns:1fr 1fr}.tools input{grid-column:1/-1}.lane-body{max-height:none}}
+@media(max-width:620px){nav{display:none}.hero{padding-top:45px}.hero h1{letter-spacing:-2px}.tools{grid-template-columns:1fr}.tools input{grid-column:auto}.section-title{display:block}.section-title p{margin-top:5px}.stickytools{top:0}}
+</style></head>
+<body>
+<header><div class="container nav"><div class="logo">Hardware <b>Compare</b></div><nav id="topNav"><a href="#montador">🛠️ Montador</a></nav></div></header>
+<main>
+<section class="hero container"><span class="pill">PC COMPLETO • POR COMPONENTE</span><h1>Monte sua máquina por <span class="grad">peça + uso + preço.</span></h1><p>Agora cada componente fica em sua própria seção: processadores, GPUs, RAM, SSD SATA, SSD NVMe, HD, fontes, placas-mãe, air coolers, water coolers, mouses, teclados e monitores. Dentro de cada seção, os produtos são organizados em uso diário, custo-benefício e alta performance.</p></section>
+<div class="stickytools"><div class="container"><div class="tools"><input id="search" placeholder="🔎 Buscar modelo, marca, especificação ou uso..."><select id="brand"><option value="all">Todas as marcas</option><option>AMD</option><option>Intel</option><option>NVIDIA</option><option>Kingston</option><option>Samsung</option><option>WD</option><option>Seagate</option><option>Corsair</option><option>MSI</option><option>ASUS</option><option>Gigabyte</option><option>DeepCool</option><option>Cooler Master</option><option>Gamdias</option><option>Logitech</option><option>Redragon</option><option>Razer</option><option>Attack Shark</option><option>Microsoft</option><option>HyperX</option><option>Akko</option><option>Wooting</option><option>Keychron</option><option>AOC</option><option>LG</option><option>Samsung</option><option>Alienware</option></select><select id="lane"><option value="all">Todas as faixas</option><option value="daily">Uso diário</option><option value="value">Custo-benefício</option><option value="high">Alta performance</option></select></div><div class="container catalog-nav" id="catNav"></div></div></div>
+
+<section class="container builder" id="montador">
+  <div class="builder-head">
+    <h2>🛠️ Montador Virtual de PC</h2>
+    <p>Escolha as peças e o site calcula uma estimativa de consumo, o custo do conjunto e verifica compatibilidade de socket, memória, plataforma, armazenamento e refrigeração.</p>
+  </div>
+  <div class="builder-grid">
+    <div>
+      <div class="builder-controls">
+        <div class="pick"><label>🧠 Processador <span id="bCpuPrice">—</span></label><select id="bCpu"></select></div>
+        <div class="pick"><label>🎮 Placa de vídeo <span id="bGpuPrice">—</span></label><select id="bGpu"></select></div>
+        <div class="pick"><label>🧱 Placa-mãe <span id="bMoboPrice">—</span></label><select id="bMobo"></select></div>
+        <div class="pick"><label>🧩 Memória RAM <span id="bRamPrice">—</span></label><select id="bRam"></select></div>
+        <div class="pick"><label>💾 SSD / NVMe <span id="bStoragePrice">—</span></label><select id="bStorage"></select></div>
+        <div class="pick"><label>🔌 Fonte <span id="bPsuPrice">—</span></label><select id="bPsu"></select></div>
+        <div class="pick"><label>❄️ Refrigeração <span id="bCoolerPrice">—</span></label><select id="bCooler"></select></div>
+      </div>
+      <div class="builder-actions" style="margin-top:12px"><button class="btn" id="clearBuild">Limpar montagem</button><button class="btn" id="shareBuild">Copiar configuração</button></div>
+    </div>
+    <aside class="build-side">
+      <div class="summary">
+        <div class="compat-title"><h3>Consumo estimado</h3><span class="compat-badge" id="powerBadge">—</span></div>
+        <div class="powerline"><div><div class="watts" id="wattsNow">0 W</div><div class="muted" id="psuNeed">Selecione as peças</div></div><div class="muted" id="headroom">—</div></div>
+        <div class="meter"><span id="powerBar"></span></div>
+        <div class="muted">Estimativa dinâmica: CPU + GPU + placa-mãe + RAM + armazenamento + refrigeração, com margem de segurança. O consumo real varia por modelo e carga.</div>
+      </div>
+      <div class="summary">
+        <div class="compat-title"><h3>Compatibilidade</h3><span class="compat-badge" id="compatBadge">Aguardando</span></div>
+        <div class="checks" id="checks"></div>
+      </div>
+      <div class="summary total"><div><div class="muted">Total estimado das peças selecionadas</div><strong id="buildTotal">R$ 0,00</strong></div><span class="muted">sem frete</span></div>
+      <div class="summary"><div class="muted">Configuração</div><div class="build-chips" id="buildChips"></div></div>
+    </aside>
+  </div>
+  <div class="builder-note">⚠️ As verificações são regras práticas para pré-montagem, não substituem a conferência do manual da placa-mãe, do cooler, da fonte e das dimensões do gabinete. Para a fonte, o site considera uma margem de segurança e sinaliza quando a potência escolhida fica abaixo da recomendação calculada.</div>
+</section>
+<div id="catalog" class="container"></div>
+<section class="container table-wrap" id="comparacao"><div class="section-title"><h2>📊 Comparação detalhada</h2><span class="count" id="totalCount"></span></div><table><thead><tr><th>Peça</th><th>Modelo</th><th>Marca</th><th>Faixa</th><th>Preço</th><th>Especificações</th><th>Uso sugerido</th></tr></thead><tbody id="tableBody"></tbody></table></section>
+<section class="container guide"><div class="box"><h3>🏠 Uso diário</h3><p>Navegação, estudos, Office, Discord, mídia e multitarefa comum. Em armazenamento e RAM, capacidade e responsividade também contam muito para a experiência.</p></div><div class="box"><h3>🔴 Custo-benefício</h3><p>Faixa intermediária pensada para equilibrar preço e recursos. Não é uma nota ou ranking absoluto; promoção, plataforma e o restante do PC alteram o valor de cada peça.</p></div><div class="box"><h3>🚀 Alta performance</h3><p>Para jogos exigentes, criação, renderização, streaming e cargas pesadas. Verifique compatibilidade, consumo, refrigeração e fonte junto com o componente.</p></div></section>
+</main>
+<footer><div class="container"><b>Hardware Compare</b> — preços exibidos são referências de mercado e podem mudar sem aviso. Para algumas peças, o preço é uma referência de faixa utilizada para organizar o catálogo, não uma cotação garantida. Especificações devem ser conferidas na página do fabricante antes da compra. Referências consultadas incluem varejo brasileiro (KaBuM!) e páginas oficiais de AMD, Intel, NVIDIA, Kingston, Samsung, WD, Seagate, Corsair, MSI, ASUS, Gigabyte, DeepCool e Cooler Master.</div></footer>
+<script>
+const img=(url)=>url;
+const A='https://commons.wikimedia.org/wiki/Special:Redirect/file/';
+const parts=[
+{cat:'CPUs',icon:'🧠',desc:'Processadores AMD e Intel para diferentes perfis.',items:[
+['Ryzen 5 5500','AMD','daily','R$ 599,99','6c / 12t • 4,2 GHz • 16 MB L3','AM4 • DDR4','Estudos, navegação, jogos de entrada','AMD_Ryzen_5_5500.jpg'],
+['Core i3-12100F','Intel','daily','R$ 699,99','4c / 8t • 4,3 GHz • 12 MB','LGA1700 • DDR4/DDR5','Uso diário + GPU dedicada','Intel_Core_i5-14600K_%28INVADERPC%29_01.png'],
+['Ryzen 5 4600G','AMD','daily','R$ 599,99','6c / 12t • 4,2 GHz • 8 MB L3','AM4 • Vega','PC sem placa de vídeo dedicada','AMD_Ryzen_5_4600G.jpg'],
+['Ryzen 5 5600','AMD','value','R$ 849,99','6c / 12t • 4,4 GHz • 32 MB L3','AM4 • DDR4','Jogos + multitarefa','AMD_Ryzen_5_5600.jpg'],
+['Ryzen 5 7500F','AMD','value','R$ 1.016,13','6c / 12t • 5,0 GHz • 32 MB L3','AM5 • DDR5','Jogos + GPU dedicada','AMD_Ryzen_5_7600_top_IMGP6773_smial_wp.jpg'],
+['Core i5-12400F','Intel','value','R$ 1.099,98','6c / 12t • 4,4 GHz • 18 MB','LGA1700 • DDR4/DDR5','Jogos + uso geral','Intel_Core_i5-14600K_%28INVADERPC%29_01.png'],
+['Core i5-14600K','Intel','value','R$ 1.699,99','14c / 20t • 5,3 GHz • 24 MB','LGA1700 • DDR4/DDR5','Jogos + multitarefa','Intel_Core_i5-14600K_%28INVADERPC%29_01.png'],
+['Ryzen 7 7800X3D','AMD','high','R$ 1.999,99','8c / 16t • 5,0 GHz • 96 MB L3','AM5 • 3D V-Cache','Jogos de alto desempenho','AMD%405nmCCD%286nmIOD%29%40Zen4%40Raphael%40Ryzen%207%207800X3D%40100-000000910%20BS%202312PGY%209LW3390030138%20DSCx03.jpg'],
+['Core i7-14700K','Intel','high','R$ 2.699,99','20c / 28t • 5,6 GHz • 33 MB','LGA1700 • DDR4/DDR5','Jogos, streaming e criação','Intel_Core_i7-14700K_%28INVADERPC%29.png'],
+['Ryzen 9 9950X','AMD','high','R$ 3.299,90','16c / 32t • 5,7 GHz • 64 MB L3','AM5 • Zen 5','Criação, renderização e produtividade','AMD_Ryzen_9_9950X.jpg'],
+['Core i9-14900K','Intel','high','R$ 3.199,99','24c / 32t • até 6,0 GHz • 36 MB','LGA1700 • DDR4/DDR5','Criação e cargas pesadas','Intel_i9-14900K.webp'] ]},
+{cat:'GPUs',icon:'🎮',desc:'Placas de vídeo AMD Radeon e NVIDIA GeForce.',items:[
+['RX 580 8GB','AMD','daily','R$ 499,99','8 GB GDDR5 • 256-bit','PCIe • 8 GB','Jogos leves/e-sports','RX_580_graphics_card.jpg'],
+['GTX 1650 4GB','NVIDIA','daily','R$ 799,99','4 GB GDDR5/GDDR6 • 128-bit','PCIe • 75W class','Jogos leves + multimídia','NVIDIA_GeForce_GTX_1650.jpg'],
+['RTX 3050 6GB','NVIDIA','daily','R$ 1.299,99','6 GB GDDR6 • DLSS','PCIe • Ray Tracing','1080p de entrada','NVIDIA_GeForce_RTX_3050.jpg'],
+['RX 6600 8GB','AMD','value','R$ 1.599,99','8 GB GDDR6 • 128-bit','PCIe • RDNA 2','1080p','AMD_Radeon_RX_6600.jpg'],
+['RTX 4060 8GB','NVIDIA','value','R$ 1.999,99','8 GB GDDR6 • DLSS 3','PCIe • Ada','1080p + RT','NVIDIA_GeForce_RTX_4060.jpg'],
+['RX 7600 8GB','AMD','value','R$ 1.959,99','8 GB GDDR6 • 128-bit','PCIe • RDNA 3','1080p alto','AMD_Radeon_RX_7600.jpg'],
+['RTX 5060 Ti 16GB','NVIDIA','high','R$ 3.299,99','16 GB GDDR7 • DLSS','PCIe • Blackwell','1080p/1440p + criação','NVIDIA_GeForce_RTX_5060_Ti.jpg'],
+['RX 9070 XT 16GB','AMD','high','R$ 5.899,99','16 GB GDDR6 • 256-bit','PCIe • RDNA 4','1440p/4K','AMD_Radeon_RX_9070_XT.jpg'],
+['RTX 5090 32GB','NVIDIA','high','R$ 16.999,99','32 GB GDDR7 • 512-bit','PCIe • Blackwell','4K extremo + criação','NVIDIA_GeForce_RTX_5090.jpg'] ]},
+{cat:'Memória RAM',icon:'🧩',desc:'Capacidade, geração, frequência e latência.',items:[
+['Kingston Fury Beast 8GB DDR4','Kingston','daily','R$ 279,99','8 GB • 3200 MT/s • CL16','DDR4 • 1x8 GB','PC básico / estudo','Kingston_Fury_Beast_RGB_DDR4.jpg'],
+['Corsair Vengeance 16GB DDR4','Corsair','daily','R$ 399,99','16 GB • 3200 MHz • CL16','DDR4 • 2x8 GB','Uso diário + jogos','Corsair_Vengeance_LPX.jpg'],
+['Kingston Fury Beast 16GB DDR5','Kingston','daily','R$ 499,99','16 GB • 5600 MT/s','DDR5 • 1x16 GB','PC novo de entrada','Kingston_Fury_Beast_DDR5.jpg'],
+['Kingston Fury Beast 32GB DDR4','Kingston','value','R$ 649,99','32 GB • 3200 MT/s • CL16','DDR4 • 2x16 GB','Jogos + multitarefa','Kingston_Fury_Beast_RGB_DDR4.jpg'],
+['XPG Gammix D35 32GB DDR4','ADATA','value','R$ 629,99','32 GB • 3200 MHz','DDR4 • 2x16 GB','Jogos + produtividade','XPG_Gammix_D35.jpg'],
+['Kingston Fury Beast 32GB DDR5 6000','Kingston','value','R$ 799,99','32 GB • 6000 MT/s','DDR5 • 2x16 GB','AM5 + jogos','Kingston_Fury_Beast_DDR5.jpg'],
+['Corsair Vengeance 32GB DDR5 6000','Corsair','high','R$ 949,99','32 GB • 6000 MHz • EXPO/XMP','DDR5 • 2x16 GB','Jogos avançados + criação','Corsair_Vengeance_DDR5.jpg'],
+['Kingston Fury Beast 64GB DDR5 6000','Kingston','high','R$ 1.599,99','64 GB • 6000 MT/s','DDR5 • 2x32 GB','Criação + máquinas virtuais','Kingston_Fury_Beast_DDR5.jpg'],
+['G.Skill Trident Z5 64GB DDR5','G.Skill','high','R$ 1.999,99','64 GB • 6400+ MT/s','DDR5 • 2x32 GB','Workstation + entusiasta','G.Skill_Trident_Z5.jpg'] ]},
+{cat:'SSD SATA',icon:'💾',desc:'Armazenamento 2,5" SATA para upgrade de PCs.',items:[
+['Kingston A400 480GB','Kingston','daily','R$ 219,99','480 GB • leitura até 500 MB/s','SATA III','Windows + estudos','Kingston_A400_SSD.jpg'],
+['WD Green 480GB','WD','daily','R$ 239,99','480 GB • SATA III','2,5" SATA','PC básico','WD_Green_SSD.jpg'],
+['SanDisk SSD Plus 1TB','SanDisk','daily','R$ 699,99','1 TB • SATA III • até 535 MB/s','2,5" SATA','Biblioteca + uso geral','SanDisk_SSD_Plus.jpg'],
+['Kingston A400 960GB','Kingston','value','R$ 449,99','960 GB • até 500 MB/s','SATA III','Jogos + arquivos','Kingston_A400_SSD.jpg'],
+['Crucial BX500 1TB','Crucial','value','R$ 499,99','1 TB • SATA III','2,5" SATA','Custo por GB','Crucial_BX500.jpg'],
+['Samsung 870 EVO 1TB','Samsung','value','R$ 799,99','1 TB • SATA III','2,5" SATA','Uso geral + jogos','Samsung_870_EVO.jpg'],
+['Samsung 870 EVO 2TB','Samsung','high','R$ 1.299,99','2 TB • SATA III','2,5" SATA','Grande biblioteca','Samsung_870_EVO.jpg'],
+['Crucial MX500 2TB','Crucial','high','R$ 1.199,99','2 TB • SATA III','2,5" SATA','Armazenamento pesado','Crucial_MX500.jpg'],
+['SanDisk Ultra 3D 2TB','SanDisk','high','R$ 1.399,99','2 TB • SATA III','2,5" SATA','Capacidade + confiabilidade','SanDisk_Ultra_3D.jpg'] ]},
+{cat:'SSD NVMe',icon:'⚡',desc:'SSDs M.2 PCIe para alta responsividade.',items:[
+['WD Green SN3000 500GB','WD','daily','R$ 399,99','500 GB • NVMe • até 5000 MB/s','M.2 • PCIe','Sistema + apps','WD_Green_SN3000.jpg'],
+['Kingston NV2 500GB','Kingston','daily','R$ 399,99','500 GB • leitura até 3500 MB/s','M.2 • PCIe 4.0','PC básico rápido','Kingston_NV2_SSD.jpg'],
+['Kingston NV3 500GB','Kingston','daily','R$ 449,99','500 GB • leitura até 5000 MB/s','M.2 • PCIe 4.0','Sistema + jogos leves','Kingston_NV3.jpg'],
+['Kingston NV2 1TB','Kingston','value','R$ 1.044,05','1 TB • 3500/2100 MB/s','M.2 • PCIe 4.0','Jogos + uso geral','Kingston_NV2_SSD.jpg'],
+['WD Green SN3000 1TB','WD','value','R$ 975,00','1 TB • NVMe','M.2 • PCIe','Custo por GB','WD_Green_SN3000.jpg'],
+['Kingston NV3 1TB','Kingston','value','R$ 1.044,05','1 TB • 6000/4000 MB/s','M.2 • PCIe 4.0','Jogos + edição','Kingston_NV3.jpg'],
+['Samsung 990 PRO 2TB','Samsung','high','R$ 1.699,99','2 TB • até 7450 MB/s','M.2 • PCIe 4.0','Jogos avançados + criação','Samsung_990_PRO.jpg'],
+['WD Black SN850X 2TB','WD','high','R$ 1.599,99','2 TB • até 7300 MB/s','M.2 • PCIe 4.0','Jogos + criação','WD_Black_SN850X.jpg'],
+['Kingston KC3000 2TB','Kingston','high','R$ 1.499,99','2 TB • até 7000 MB/s','M.2 • PCIe 4.0','Workstation + jogos','Kingston_KC3000.jpg'] ]},
+{cat:'HD',icon:'🗄️',desc:'Grande capacidade com baixo custo por GB.',items:[
+['WD Blue 1TB','WD','daily','R$ 446,94','1 TB • 5400 RPM • 128 MB','SATA • 2,5"','Arquivos e backup leve','WD_Blue_HDD.jpg'],
+['Seagate Barracuda 1TB','Seagate','daily','R$ 483,79','1 TB • 7200 RPM • 64 MB','SATA • 3,5"','Armazenamento geral','Seagate_Barracuda_HDD.jpg'],
+['WD Blue 1TB 7200 RPM','WD','daily','R$ 492,15','1 TB • 7200 RPM • 64 MB','SATA • 3,5"','Uso geral','WD_Blue_HDD.jpg'],
+['Seagate Barracuda 2TB','Seagate','value','R$ 1.116,00','2 TB • 7200 RPM • 256 MB','SATA • 3,5"','Jogos antigos + arquivos','Seagate_Barracuda_HDD.jpg'],
+['Seagate BarraCuda 4TB','Seagate','value','R$ 1.424,05','4 TB • 5400 RPM • 256 MB','SATA • 3,5"','Biblioteca grande','Seagate_Barracuda_HDD.jpg'],
+['WD Purple 4TB','WD','value','R$ 1.199,99','4 TB • linha para vigilância','SATA • 3,5"','CFTV + armazenamento','WD_Purple_HDD.jpg'],
+['Seagate IronWolf 8TB','Seagate','high','R$ 2.599,99','8 TB • NAS','SATA • 3,5"','NAS + grande volume','Seagate_IronWolf_HDD.jpg'],
+['WD Red Plus 8TB','WD','high','R$ 3.299,99','8 TB • NAS • 7200 RPM','SATA • 3,5"','NAS + servidor doméstico','WD_Red_Plus_HDD.jpg'],
+['Seagate Barracuda 8TB','Seagate','high','R$ 2.259,99','8 TB • 3,5" SATA','SATA • 7200 RPM','Armazenamento massivo','Seagate_Barracuda_HDD.jpg'] ]},
+{cat:'Fontes',icon:'🔌',desc:'Potência e certificação para alimentar o PC.',items:[
+['Husky Sledger 550W','Husky','daily','R$ 199,99','550 W • 80 Plus White • PFC ativo','ATX • Bivolt','PC básico','Husky_Sledger_550W.jpg'],
+['MSI MAG A550BN','MSI','daily','R$ 306,81','550 W • 80 Plus Bronze','ATX • PFC ativo','PC de entrada','MSI_MAG_A550BN.jpg'],
+['Corsair CX550','Corsair','daily','R$ 341,10','550 W • 80 Plus Bronze','ATX','PC básico + GPU de entrada','Corsair_CX550.jpg'],
+['MSI MAG A650BN','MSI','value','R$ 349,99','650 W • 80 Plus Bronze','ATX • PFC ativo','PC gamer intermediário','MSI_MAG_A650BN.jpg'],
+['Corsair CX650','Corsair','value','R$ 449,99','650 W • 80 Plus Bronze','ATX','GPU intermediária','Corsair_CX650.jpg'],
+['Cooler Master MWE 750 Bronze','Cooler Master','value','R$ 499,99','750 W • 80 Plus Bronze','ATX • PFC ativo','GPU intermediária/alta','Cooler_Master_MWE.jpg'],
+['Corsair RM850e','Corsair','high','R$ 799,99','850 W • 80 Plus Gold • modular','ATX 3.x','GPU de alto consumo','Corsair_RM850e.jpg'],
+['MSI MAG A850GL PCIe 5','MSI','high','R$ 699,99','850 W • 80 Plus Gold • modular','ATX 3.0','GPU high-end','MSI_MAG_A850GL.jpg'],
+['Corsair RM1000e','Corsair','high','R$ 999,99','1000 W • 80 Plus Gold • modular','ATX • PCIe 5','PC topo de linha','Corsair_RM1000e.jpg'] ]},
+{cat:'Placas-mãe',icon:'🧱',desc:'Base do sistema: socket, chipset, slots e expansão.',items:[
+['MSI PRO H610M-S DDR4','MSI','daily','R$ 499,99','H610 • 2x DDR4 • M.2 PCIe 3.0','LGA1700 • mATX','Intel de entrada','MSI_PRO_H610M-S.jpg'],
+['ASRock B450M-HDV R4.0','ASRock','daily','R$ 449,99','B450 • DDR4 • M.2','AM4 • mATX','Ryzen AM4 básico','ASRock_B450M-HDV.jpg'],
+['NTC H610M DDR4','NTC','daily','R$ 474,90','H610 • 2x DDR4 • M.2','LGA1700 • mATX','PC Intel de entrada','H610_Motherboard.jpg'],
+['ASRock B550M-HDV','ASRock','value','R$ 599,99','B550 • PCIe 4.0 • M.2','AM4 • DDR4','Ryzen 5000 + GPU','ASRock_B550M-HDV.jpg'],
+['Gigabyte B550M Aorus Elite','Gigabyte','value','R$ 749,99','B550 • PCIe 4.0 • VRM','AM4 • DDR4','Ryzen 5000 avançado','Gigabyte_B550M_Aorus_Elite.jpg'],
+['MSI PRO B760M-A DDR4','MSI','value','R$ 899,99','B760 • DDR4 • 2x M.2','LGA1700','Intel intermediário','MSI_PRO_B760M-A.jpg'],
+['MSI MAG B650 Tomahawk Wi-Fi','MSI','high','R$ 1.599,99','B650 • DDR5 • Wi-Fi','AM5 • ATX','Ryzen 7000/9000','MSI_B650_Tomahawk.jpg'],
+['ASUS TUF Gaming B650-PLUS','ASUS','high','R$ 1.499,99','B650 • DDR5 • PCIe 5 M.2','AM5 • ATX','Gaming avançado','ASUS_TUF_B650-PLUS.jpg'],
+['MSI MPG B650 EDGE WiFi','MSI','high','R$ 3.786,00','B650 • DDR5 • Wi-Fi','AM5 • ATX','Entusiasta / workstation','MSI_B650_EDGE.jpg'] ]},
+{cat:'Air Coolers',icon:'❄️',desc:'Refrigeração a ar com torres e heatpipes.',items:[
+['DeepCool AG400','DeepCool','daily','R$ 157,25','1 torre • 120 mm • 4 heatpipes','AMD/Intel','CPUs de entrada','DeepCool_AG400.jpg'],
+['DeepCool AK400','DeepCool','daily','R$ 149,90','1 torre • 120 mm • 4 heatpipes','AMD/Intel','Uso geral + Ryzen 5/Core i5','DeepCool_AK400.jpg'],
+['Cooler Master Hyper 411 Nano','Cooler Master','daily','R$ 199,90','Torre • 120 mm','AMD/Intel','PC doméstico','Cooler_Master_Hyper_411.jpg'],
+['DeepCool AG400 G2 ARGB','DeepCool','value','R$ 159,89','1 torre • ARGB • 120 mm','AMD/Intel','Gaming intermediário','DeepCool_AG400_G2.jpg'],
+['DeepCool AK400 G2 Digital','DeepCool','value','R$ 458,25','Display • torre • 120 mm','AMD/Intel','Gaming + estética','DeepCool_AK400_Digital.jpg'],
+['DeepCool AK620 G2','DeepCool','value','R$ 468,95','Dual-tower • 2x120 mm','AMD/Intel','CPUs fortes','DeepCool_AK620.jpg'],
+['DeepCool Assassin IV','DeepCool','high','R$ 699,99','Dual-tower • múltiplos heatpipes','AMD/Intel','Alta performance','DeepCool_Assassin_IV.jpg'],
+['Thermalright Phantom Spirit 120','Thermalright','high','R$ 399,99','Dual-tower • 7 heatpipes','AMD/Intel','CPUs de alto consumo','Thermalright_Phantom_Spirit.jpg'],
+['Noctua NH-D15 G2','Noctua','high','R$ 999,99','Dual-tower • 2x140 mm','AMD/Intel','Workstation/entusiasta','Noctua_NH-D15.jpg'] ]},
+{cat:'Water Coolers',icon:'💧',desc:'Refrigeração líquida AIO em 120/240/360 mm.',items:[
+['Gamdias Chione Lite 120','Gamdias','daily','R$ 198,00','Radiador 120 mm','AMD/Intel','PC compacto','Gamdias_Chione_120.jpg'],
+['Mach1 Logic 240','Mach1','daily','R$ 149,99','Radiador 240 mm','AMD/Intel','Gaming de entrada','Mach1_Logic_240.jpg'],
+['Husky Glacier 240','Husky','daily','R$ 199,99','Radiador 240 mm • ARGB','AMD/Intel','Gaming intermediário','Husky_Glacier_240.jpg'],
+['Gamdias Aura GL 240 V2','Gamdias','value','R$ 299,90','Radiador 240 mm • ARGB','AMD/Intel','CPU intermediária','Gamdias_Aura_GL_240.jpg'],
+['Cooler Master Elite Liquid 240','Cooler Master','value','R$ 404,99','Radiador 240 mm • ARGB','AMD/Intel','Gaming + criação','Cooler_Master_Elite_Liquid_240.jpg'],
+['Cooler Master MasterLiquid Core Nex 360','Cooler Master','value','R$ 439,99','Radiador 360 mm • ARGB','AMD/Intel','CPU de alto consumo','Cooler_Master_Core_Nex_360.jpg'],
+['Gamdias Aura GL 360 V2','Gamdias','high','R$ 359,90','Radiador 360 mm • ARGB','AMD/Intel','Alta performance','Gamdias_Aura_GL_360.jpg'],
+['MSI MAG CoreLiquid A13 360','MSI','high','R$ 459,99','Radiador 360 mm • ARGB','AMD/Intel','Gaming high-end','MSI_CoreLiquid_360.jpg'],
+['MSI MPG CoreLiquid P13 360','MSI','high','R$ 1.159,99','Radiador 360 mm • ARGB • LCD','AMD/Intel','Entusiasta','MSI_MPG_CoreLiquid_P13.jpg'] ]}
+,{cat:'Mouses',icon:'🖱️',desc:'Mouses para trabalho, jogos e alta performance competitiva.',items:[
+['Logitech M90','Logitech','daily','R$ 59,90','1000 DPI • 3 botões • com fio','USB','Estudo, Office e uso geral','Logitech_M90.jpg'],
+['Logitech M185','Logitech','daily','R$ 89,90','1000 DPI • sem fio • receptor USB','2,4 GHz','Notebook, estudo e escritório','Logitech_M185.jpg'],
+['Logitech G203 LIGHTSYNC','Logitech','daily','R$ 149,90','8.000 DPI • 6 botões • RGB','USB • com fio','Uso geral + jogos','Logitech_G203_LIGHTSYNC.jpg'],
+['Redragon M711 Cobra RGB','Redragon','value','R$ 89,99','10.000 DPI • 7 botões • RGB','USB • com fio','Gaming de entrada','Redragon_M711_Cobra.jpg'],
+['Attack Shark X3','Attack Shark','value','R$ 154,16','26.000 DPI • PAW3395 • sem fio','2,4 GHz / Bluetooth / USB-C','FPS + mobilidade','Attack_Shark_X3.jpg'],
+['Logitech G305 LIGHTSPEED','Logitech','value','R$ 229,90','12.000 DPI • HERO • sem fio','LIGHTSPEED','Gaming + trabalho','Logitech_G305.jpg'],
+['Logitech G502 X','Logitech','high','R$ 399,99','25.600 DPI • 13 botões • LIGHTFORCE','USB • com fio','MMO + alta precisão','Logitech_G502_X.jpg'],
+['Razer DeathAdder V3 Pro','Razer','high','R$ 689,96','30.000 DPI • Focus Pro • sem fio','HyperSpeed / USB-C','FPS competitivo','Razer_DeathAdder_V3_Pro.jpg'],
+['Logitech G Pro X Superlight 2','Logitech','high','R$ 719,90','32.000 DPI • 60 g • sem fio','LIGHTSPEED / USB-C','Esports + FPS','Logitech_G_Pro_X_Superlight_2.jpg'] ]}
+,{cat:'Teclados',icon:'⌨️',desc:'Teclados de membrana, mecânicos, sem fio e magnéticos.',items:[
+['Logitech K120','Logitech','daily','R$ 69,90','Membrana • layout ABNT2','USB • com fio','Escola, Office e uso geral','Logitech_K120.jpg'],
+['Microsoft Wired Keyboard 600','Microsoft','daily','R$ 119,90','Membrana • teclado completo','USB • com fio','Trabalho e estudos','Microsoft_Wired_Keyboard_600.jpg'],
+['Redragon Kumara K552','Redragon','daily','R$ 169,99','Mecânico • TKL • switches Red','USB • ABNT2','Uso geral + jogos','Redragon_K552.jpg'],
+['Akko 3068S ABNT2','Akko','value','R$ 199,99','Mecânico 65% • hot-swap • ABNT2','USB-C','Gaming + customização','Akko_3068S.jpg'],
+['Redragon Kumara Pro RGB','Redragon','value','R$ 312,80','Mecânico • TKL • RGB','USB / Bluetooth','Gaming + sem fio','Redragon_K552_Pro.jpg'],
+['HyperX Alloy Origins','HyperX','value','R$ 449,99','Mecânico • TKL/full • RGB','USB-C','Gaming + produtividade','HyperX_Alloy_Origins.jpg'],
+['Logitech G PRO X Lightspeed','Logitech','high','R$ 503,34','Mecânico • sem fio • switches GX','LIGHTSPEED / USB-C','Esports + mobilidade','Logitech_G_PRO_X.jpg'],
+['Keychron Q1 HE','Keychron','high','R$ 1.399,99','Magnético • Hall Effect • Rapid Trigger','USB-C','Gaming competitivo + custom','Keychron_Q1_HE.jpg'],
+['Wooting 80HE','Wooting','high','R$ 3.365,85','Hall Effect • Rapid Trigger • 80%','USB-C','Competitivo + entusiasta','Wooting_80HE.jpg'] ]}
+,{cat:'Monitores',icon:'🖥️',desc:'Monitores por resolução, taxa de atualização e tipo de painel.',items:[
+['AOC 22B1H','AOC','daily','R$ 549,99','21,5" • Full HD • 75 Hz • VA','HDMI / VGA','Estudo e Office','AOC_22B1H.jpg'],
+['Samsung T350 24"','Samsung','daily','R$ 649,99','24" • Full HD • 75 Hz • IPS','HDMI / VGA','Trabalho e uso geral','Samsung_T350.jpg'],
+['LG UltraGear 24" 180Hz','LG','daily','R$ 739,99','24" • Full HD • 180 Hz • IPS','HDMI / DisplayPort','Gaming de entrada + Office','LG_UltraGear_24_180Hz.jpg'],
+['AOC 24G2','AOC','value','R$ 928,15','23,8" • Full HD • 144 Hz • IPS','HDMI / DisplayPort','Gaming 1080p','AOC_24G2.jpg'],
+['AOC Q27G4F','AOC','value','R$ 1.249,99','27" • QHD • 180 Hz • IPS','HDMI / DisplayPort','Gaming 1440p','AOC_Q27G4F.jpg'],
+['LG UltraGear 27" QHD','LG','value','R$ 1.899,99','27" • QHD • IPS • alta taxa','HDMI / DisplayPort','Gaming + criação','LG_UltraGear_27_QHD.jpg'],
+['LG 27GR83Q-B','LG','high','R$ 2.133,91','27" • QHD • 240 Hz • IPS','HDMI 2.1 / DisplayPort','FPS competitivo + alto Hz','LG_27GR83Q.jpg'],
+['Samsung Odyssey OLED G6','Samsung','high','R$ 5.422,19','27" • QHD • OLED • 360 Hz','DisplayPort / HDMI','Competitivo + OLED','Samsung_Odyssey_OLED_G6.jpg'],
+['Alienware AW3225QF','Alienware','high','R$ 8.499,00','31,6" • 4K • QD-OLED • 240 Hz','HDMI 2.1 / DisplayPort','4K premium + criação','Alienware_AW3225QF.jpg'] ]}
+
+];
+const useMap={daily:['Uso diário','Para tarefas comuns, PC básico e upgrades leves.'],value:['Custo-benefício','Equilíbrio de preço, recursos e desempenho.'],high:['Alta performance','Para cargas exigentes, gaming e criação.']};
+const catMeta=parts.reduce((o,p)=>(o[p.cat]=p,o),{});
+function slug(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')}
+function topnav(){document.getElementById('topNav').innerHTML='<a href="#montador">🛠️ Montador</a>'+parts.map(p=>`<a href="#${slug(p.cat)}">${p.cat}</a>`).join('')+'<a href="#comparacao">Tabela</a>';document.getElementById('catNav').innerHTML=parts.map(p=>`<button class="cat-btn" data-jump="#${slug(p.cat)}">${p.icon} ${p.cat}</button>`).join('')}
+function art(cat){const map={'CPUs':'🧠','GPUs':'🎮','Memória RAM':'🧩','SSD SATA':'💾','SSD NVMe':'⚡','HD':'🗄️','Fontes':'🔌','Placas-mãe':'🧱','Air Coolers':'❄️','Water Coolers':'💧','Mouses':'🖱️','Teclados':'⌨️','Monitores':'🖥️'};return `<div class="art">${map[cat]||'🖥️'}</div>`}
+function esc(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')}
+function allRows(){return parts.flatMap(p=>p.items.map(x=>({cat:p.cat,icon:p.icon,m:x[0],brand:x[1],lane:x[2],price:x[3],spec:x[4],platform:x[5],use:x[6],file:x[7]})))}
+function matches(x){const q=document.getElementById('search').value.trim().toLowerCase();const b=document.getElementById('brand').value;const l=document.getElementById('lane').value;const text=[x.cat,x.m,x.brand,x.spec,x.platform,x.use].join(' ').toLowerCase();return (!q||text.includes(q))&&(b==='all'||x.brand===b)&&(l==='all'||x.lane===l)}
+
+/* Fotos: tenta primeiro uma foto específica conhecida, depois procura automaticamente no Wikimedia Commons.
+   Os nomes antigos do catálogo só são usados quando parecem corresponder ao modelo, evitando fotos de outro produto. */
+const photoCache=new Map();
+const photoOverrides={
+  'Ryzen 5 5500':'https://images.kabum.com.br/produtos/fotos/sync_mirakl/356695/xlarge/Processador-AMD-Ryzen-5-5500-3-6GHz-Cache-16MB-Hexa-Core-12-Threads-AM4-100-100000457BOX_1787582620.jpg',
+  'Core i7-14700K':'https://dl.bs365.uz/storage/products/29410/7HqCZSSqMcSnLlNn2UsJ-large_default.jpg',
+  'Core i5-14600K':'https://static.tek.id/2024/03/05/65695/review-intel-core-i5-14600k-enak-main-game-gampang-di-oc-OACPrW1qwX.jpg',
+  'Ryzen 7 7800X3D':'https://cdnbase.comfy.ua/media/catalog/product/1/_/1_270_25.jpg'
+};
+function categoryIcon(cat){const map={'CPUs':'🧠','GPUs':'🎮','Memória RAM':'🧩','SSD SATA':'💾','SSD NVMe':'⚡','HD':'🗄️','Fontes':'🔌','Placas-mãe':'🧱','Air Coolers':'❄️','Water Coolers':'💧','Mouses':'🖱️','Teclados':'⌨️','Monitores':'🖥️'};return map[cat]||'🖥️'}
+function fallbackSvg(x){
+ const icon=categoryIcon(x.cat), safeName=esc(x.m), safeBrand=esc(x.brand);
+ return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#21070a"/><stop offset="1" stop-color="#070707"/></linearGradient></defs><rect width="900" height="520" rx="32" fill="url(#g)"/><circle cx="450" cy="180" r="118" fill="#3b0a0f"/><text x="450" y="215" text-anchor="middle" font-size="105">${icon}</text><text x="450" y="345" fill="#fff" font-family="Arial" font-size="34" font-weight="700" text-anchor="middle">${safeName}</text><text x="450" y="390" fill="#ff6972" font-family="Arial" font-size="22" text-anchor="middle">${safeBrand} • ${esc(x.cat)}</text><text x="450" y="445" fill="#999" font-family="Arial" font-size="17" text-anchor="middle">Foto não localizada — buscando imagem...</text></svg>`);
+}
+function strongTokens(model){return model.toLowerCase().replace(/[^a-z0-9]+/gi,' ').split(' ').filter(t=>t.length>=3 && !['the','pro','rgb','plus','wireless','gaming','black','white','mini','max','core','ultra','series'].includes(t));}
+function fileLooksRelevant(x){
+ if(!x.file) return false;
+ const f=x.file.toLowerCase();
+ const tokens=strongTokens(x.m);
+ const distinguishing=tokens.filter(t=>/\d/.test(t) || t.length>=5);
+ if(distinguishing.some(t=>f.includes(t))) return true;
+ const fam=x.m.toLowerCase().split(' ').slice(0,3).filter(Boolean);
+ return fam.length>0 && fam.every(t=>f.includes(t.replace(/[^a-z0-9]/g,'')));
+}
+async function findCommonsImage(x){
+ const key=x.m+'|'+x.cat;
+ if(photoCache.has(key)) return photoCache.get(key);
+ const cached=cachedPhoto(x); if(cached){photoCache.set(key,cached);return cached;}
+ const q=`${x.m} ${x.brand} ${x.cat}`;
+ const api='https://commons.wikimedia.org/w/api.php?origin=*&action=query&generator=search&gsrnamespace=6&gsrlimit=10&prop=imageinfo&iiprop=url&iiurlwidth=900&format=json&formatversion=2&gsrsearch='+encodeURIComponent(q);
+ try{
+  const r=await fetch(api); if(!r.ok) throw new Error('API');
+  const j=await r.json(); const pages=j?.query?.pages||[]; const tokens=strongTokens(x.m);
+  let best=null,bscore=-999;
+  for(const page of pages){
+   const title=(page.title||'').toLowerCase();
+   const info=page.imageinfo?.[0]; if(!info?.thumburl) continue;
+   let score=tokens.reduce((n,t)=>n+(title.includes(t)?2:0),0);
+   if(title.includes(x.brand.toLowerCase())) score+=1;
+   if(/logo|icon|banner/.test(title)) score-=5;
+   if(/photo|processor|graphics|keyboard|mouse|monitor|memory|motherboard|ssd|hard drive|power supply|cooler/.test(title)) score+=1;
+   if(score>bscore){best=info.thumburl;bscore=score;}
+  }
+  if(best && bscore>=2){photoCache.set(key,best);try{localStorage.setItem('hc-photo-'+btoa(unescape(encodeURIComponent(key))),best)}catch(e){}return best;}
+ }catch(e){}
+ return null;
+}
+function cachedPhoto(x){try{return localStorage.getItem('hc-photo-'+btoa(unescape(encodeURIComponent(x.m+'|'+x.cat))))}catch(e){return null}}
+function card(x){
+ const override=photoOverrides[x.m];
+ const cached=cachedPhoto(x);
+ const initial=override || cached || (fileLooksRelevant(x)?'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(x.file):fallbackSvg(x));
+ return `<article class="card"><div class="media"><img class="product-photo" src="${initial}" alt="Foto do produto ${esc(x.m)}" data-model="${esc(x.m)}" data-brand="${esc(x.brand)}" data-cat="${esc(x.cat)}" data-fallback="${fallbackSvg(x)}"><span class="label">${esc(x.cat)}</span></div><div class="body"><div class="brand">${esc(x.brand)}</div><h4>${esc(x.m)}</h4><div class="tags"><span class="tag">${useMap[x.lane][0]}</span><span class="tag">${esc(x.platform)}</span></div><div class="specs"><div class="spec">Especificação<b>${esc(x.spec)}</b></div><div class="spec">Uso<b>${esc(x.use)}</b></div></div><div class="buy"><div class="price">${esc(x.price)}<small>preço de referência</small></div><a class="src" href="https://www.google.com/search?q=${encodeURIComponent(x.m+' preço Brasil')}" target="_blank" rel="noopener">Pesquisar preço ↗</a></div><div class="desc">${useMap[x.lane][1]}</div></div></article>`;
+}
+async function hydratePhotos(){
+ const imgs=[...document.querySelectorAll('.product-photo')];
+ for(let i=0;i<imgs.length;i+=6){
+  await Promise.all(imgs.slice(i,i+6).map(async img=>{
+   if(img.dataset.searchStarted==='1' || photoOverrides[img.dataset.model] || cachedPhoto({m:img.dataset.model,cat:img.dataset.cat})) return;
+   img.dataset.searchStarted='1';
+   const x={m:img.dataset.model,brand:img.dataset.brand,cat:img.dataset.cat};
+   const found=await findCommonsImage(x);
+   if(found) img.src=found;
+  }));
+ }
+}
+
+function render(){const rows=allRows().filter(matches);let html='';for(const p of parts){const id=slug(p.cat);const items=rows.filter(x=>x.cat===p.cat);html+=`<section class="section" id="${id}"><div class="section-title"><h2>${p.icon} ${p.cat}</h2><span class="count">${items.length} modelos</span><p>${p.desc}</p></div><div class="lanes">${['daily','value','high'].map(l=>{const laneItems=items.filter(x=>x.lane===l);return `<div class="lane"><div class="lane-head"><h3>${useMap[l][0]}</h3><small>${laneItems.length} opção(ões) na seleção</small></div><div class="lane-body">${laneItems.length?laneItems.map(card).join(''):`<div class="empty">Nenhum produto com os filtros atuais.</div>`}</div></div>`}).join('')}</div></section>`}document.getElementById('catalog').innerHTML=html;document.getElementById('tableBody').innerHTML=rows.map(x=>`<tr><td>${x.icon} ${esc(x.cat)}</td><td><b>${esc(x.m)}</b></td><td>${esc(x.brand)}</td><td>${useMap[x.lane][0]}</td><td>${esc(x.price)}</td><td class="dim">${esc(x.spec)} • ${esc(x.platform)}</td><td class="dim">${esc(x.use)}</td></tr>`).join('');document.getElementById('totalCount').textContent=rows.length+' produtos exibidos';hydratePhotos();}
+['search','brand','lane'].forEach(id=>document.getElementById(id).addEventListener('input',render));document.getElementById('catNav').addEventListener('click',e=>{const b=e.target.closest('.cat-btn');if(b)document.querySelector(b.dataset.jump)?.scrollIntoView({behavior:'smooth'});});
+// ===== Montador Virtual =====
+const buildSpec={
+  cpu:{
+    'Ryzen 5 5500':{socket:'AM4',ram:'DDR4',w:65,p:599.99},'Ryzen 5 4600G':{socket:'AM4',ram:'DDR4',w:65,p:599.99},'Ryzen 5 5600':{socket:'AM4',ram:'DDR4',w:65,p:849.99},'Ryzen 5 7500F':{socket:'AM5',ram:'DDR5',w:65,p:1016.13},'Ryzen 7 7800X3D':{socket:'AM5',ram:'DDR5',w:120,p:1999.99},'Ryzen 9 9950X':{socket:'AM5',ram:'DDR5',w:170,p:3299.90},
+    'Core i3-12100F':{socket:'LGA1700',ram:'DDR4/DDR5',w:58,p:699.99},'Core i5-12400F':{socket:'LGA1700',ram:'DDR4/DDR5',w:65,p:1099.98},'Core i5-14600K':{socket:'LGA1700',ram:'DDR4/DDR5',w:125,p:1699.99},'Core i7-14700K':{socket:'LGA1700',ram:'DDR4/DDR5',w:125,p:2699.99},'Core i9-14900K':{socket:'LGA1700',ram:'DDR4/DDR5',w:125,p:3199.99}
+  },
+  gpu:{'RX 580 8GB':{w:185,p:499.99},'GTX 1650 4GB':{w:75,p:799.99},'RTX 3050 6GB':{w:70,p:1299.99},'RX 6600 8GB':{w:132,p:1599.99},'RTX 4060 8GB':{w:115,p:1999.99},'RX 7600 8GB':{w:165,p:1959.99},'RTX 5060 Ti 16GB':{w:180,p:3299.99},'RX 9070 XT 16GB':{w:304,p:5899.99},'RTX 5090 32GB':{w:575,p:16999.99}},
+  mobo:{'MSI PRO H610M-S DDR4':{socket:'LGA1700',ram:'DDR4',p:499.99},'ASRock B450M-HDV R4.0':{socket:'AM4',ram:'DDR4',p:449.90},'MSI PRO B550M-VC WIFI':{socket:'AM4',ram:'DDR4',p:799.99},'ASUS TUF GAMING B650-PLUS':{socket:'AM5',ram:'DDR5',p:1399.99},'MSI PRO B760M-A DDR4':{socket:'LGA1700',ram:'DDR4',p:899.99},'MSI MAG B760 TOMAHAWK WIFI':{socket:'LGA1700',ram:'DDR5',p:1299.99}},
+  ram:{'Kingston Fury Beast 8GB DDR4':{ram:'DDR4',w:4,p:279.99},'Corsair Vengeance 16GB DDR4':{ram:'DDR4',w:6,p:399.99},'Kingston Fury Beast 16GB DDR5':{ram:'DDR5',w:6,p:499.99},'Kingston Fury Beast 32GB DDR4':{ram:'DDR4',w:8,p:649.99},'Kingston Fury Beast 32GB DDR5 6000':{ram:'DDR5',w:8,p:799.99},'Corsair Vengeance 32GB DDR5 6000':{ram:'DDR5',w:8,p:949.99},'Kingston Fury Beast 64GB DDR5 6000':{ram:'DDR5',w:10,p:1599.99}},
+  storage:{'Kingston A400 480GB':{iface:'SATA',w:3,p:219.99},'Crucial BX500 1TB':{iface:'SATA',w:3,p:499.99},'Samsung 870 EVO 1TB':{iface:'SATA',w:3,p:799.99},'Kingston NV2 500GB':{iface:'NVMe',w:4,p:399.99},'Kingston NV3 1TB':{iface:'NVMe',w:5,p:1044.05},'Samsung 990 PRO 2TB':{iface:'NVMe',w:6,p:1699.99}},
+  psu:{'Husky Sledger 550W':{w:550,p:199.99},'MSI MAG A550BN':{w:550,p:306.81},'Corsair CX550':{w:550,p:341.10},'MSI MAG A650BN':{w:650,p:349.99},'Corsair CX650':{w:650,p:449.99},'Cooler Master MWE 750 Bronze':{w:750,p:499.99},'Corsair RM850e':{w:850,p:799.99},'MSI MAG A850GL PCIe 5':{w:850,p:699.99},'Corsair RM1000e':{w:1000,p:999.99}},
+  cooler:{'Cooler Master Hyper 212 Spectrum V3':{sockets:['AM4','AM5','LGA1700'],w:5,p:179.99},'DeepCool AG400':{sockets:['AM4','AM5','LGA1700'],w:5,p:189.99},'DeepCool AK620':{sockets:['AM4','AM5','LGA1700'],w:7,p:449.99},'Gamdias Boreas E1-410':{sockets:['AM4','AM5','LGA1700'],w:6,p:139.99},'Gamdias Boreas P1-720':{sockets:['AM4','AM5','LGA1700'],w:12,p:279.99},'Cooler Master Hyper 622 Halo':{sockets:['AM4','AM5','LGA1700'],w:8,p:399.99}}
+};
+// Complete/normalize motherboard and cooler options from the catalog when available.
+function priceNum(v){return Number(String(v).replace(/[^0-9,.-]/g,'').replace(/\./g,'').replace(',','.'))||0}
+function getCatalogByName(name){const x=allRows().find(r=>r.m===name);return x}
+function enrichBuildData(){
+  const moboNames=parts.find(p=>p.cat==='Placas-mãe')?.items||[]; moboNames.forEach(x=>{if(!buildSpec.mobo[x[0]]){let socket=x[5].match(/AM5|AM4|LGA1700|LGA1200|LGA1151/i)?.[0]||'';let ram=x[4].match(/DDR4|DDR5/i)?.[0]||'';buildSpec.mobo[x[0]]={socket,ram,p:priceNum(x[3])}}});
+  const coolNames=[...(parts.find(p=>p.cat==='Air Coolers')?.items||[]),...(parts.find(p=>p.cat==='Water Coolers')?.items||[])]; coolNames.forEach(x=>{if(!buildSpec.cooler[x[0]])buildSpec.cooler[x[0]]={sockets:['AM4','AM5','LGA1700'],w:10,p:priceNum(x[3])}});
+  const ramNames=parts.find(p=>p.cat==='Memória RAM')?.items||[]; ramNames.forEach(x=>{if(!buildSpec.ram[x[0]])buildSpec.ram[x[0]]={ram:x[4].match(/DDR4|DDR5/i)?.[0]||'',w:6,p:priceNum(x[3])}});
+  const storageNames=[...(parts.find(p=>p.cat==='SSD SATA')?.items||[]),...(parts.find(p=>p.cat==='SSD NVMe')?.items||[])]; storageNames.forEach(x=>{if(!buildSpec.storage[x[0]])buildSpec.storage[x[0]]={iface:/NVMe|M\.2/i.test(x[5]+' '+x[4])?'NVMe':'SATA',w:/NVMe|M\.2/i.test(x[5]+' '+x[4])?5:3,p:priceNum(x[3])}});
+  const cpuNames=parts.find(p=>p.cat==='CPUs')?.items||[]; cpuNames.forEach(x=>{if(!buildSpec.cpu[x[0]]){let socket=x[5].match(/AM5|AM4|LGA1700/i)?.[0]||'';let ram=x[5].match(/DDR4|DDR5|DDR4\/DDR5/i)?.[0]||'';buildSpec.cpu[x[0]]={socket,ram,w:65,p:priceNum(x[3])}}});
+  const gpuNames=parts.find(p=>p.cat==='GPUs')?.items||[]; gpuNames.forEach(x=>{if(!buildSpec.gpu[x[0]])buildSpec.gpu[x[0]]={w:150,p:priceNum(x[3])}});
+  const psuNames=parts.find(p=>p.cat==='Fontes')?.items||[]; psuNames.forEach(x=>{if(!buildSpec.psu[x[0]]){let w=Number((x[4].match(/\d{3,4}/)||['0'])[0]);buildSpec.psu[x[0]]={w,p:priceNum(x[3])}}});
+}
+function optsFor(selectId, data, placeholder){const sel=document.getElementById(selectId);sel.innerHTML='<option value="">'+placeholder+'</option>'+Object.entries(data).map(([name,s])=>`<option value="${esc(name)}">${esc(name)} — R$ ${s.p.toLocaleString('pt-BR',{minimumFractionDigits:2})}</option>`).join('')}
+function current(name){return document.getElementById(name).value}
+function buildSelected(){return {cpu:current('bCpu'),gpu:current('bGpu'),mobo:current('bMobo'),ram:current('bRam'),storage:current('bStorage'),psu:current('bPsu'),cooler:current('bCooler')}}
+function money(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function compatibility(){
+ const b=buildSelected(), sCPU=buildSpec.cpu[b.cpu],sM=buildSpec.mobo[b.mobo],sR=buildSpec.ram[b.ram],sC=buildSpec.cooler[b.cooler];
+ const checks=[];
+ if(!b.cpu&&!b.mobo) checks.push({t:'Selecione CPU e placa-mãe para verificar socket.',c:'warn'});
+ if(b.cpu&&b.mobo) checks.push(sCPU.socket===sM.socket?{t:`Socket compatível: ${sCPU.socket}.`,c:'ok'}:{t:`Socket incompatível: CPU ${sCPU.socket || '—'} × placa-mãe ${sM.socket || '—'}.`,c:'bad'});
+ if(b.cpu&&b.ram){const cr=sCPU.ram,r=sR.ram;const ok=cr.includes(r)||cr.includes('DDR4/DDR5');checks.push(ok?{t:`Memória ${r} compatível com a plataforma da CPU (${cr}).`,c:'ok'}:{t:`Geração de RAM incompatível: CPU/plataforma ${cr} × RAM ${r}.`,c:'bad'});}
+ if(b.mobo&&b.ram) checks.push(sM.ram===sR.ram?{t:`RAM ${sR.ram} compatível com a placa-mãe.`,c:'ok'}:{t:`RAM incompatível: placa-mãe aceita ${sM.ram} e a memória escolhida é ${sR.ram}.`,c:'bad'});
+ if(b.cpu&&b.mobo&&sCPU.socket&&sM.socket&&sCPU.socket===sM.socket) checks.push({t:'Plataforma CPU + placa-mãe coerente.',c:'ok'});
+ if(b.mobo&&b.storage){checks.push({t:`Armazenamento ${buildSpec.storage[b.storage].iface} selecionado. Confirme no manual os slots disponíveis; o montador não reserva slots M.2/SATA.`,c:'warn'});}
+ if(b.cpu&&b.cooler){const ok=sC.sockets.includes(sCPU.socket);checks.push(ok?{t:`Refrigeração suporta ${sCPU.socket}.`,c:'ok'}:{t:`Cooler sem suporte ao socket ${sCPU.socket}.`,c:'bad'});}
+ return checks;
+}
+function updateBuilder(){
+ const b=buildSelected(); const vals=[buildSpec.cpu[b.cpu],buildSpec.gpu[b.gpu],buildSpec.mobo[b.mobo],buildSpec.ram[b.ram],buildSpec.storage[b.storage],buildSpec.psu[b.psu],buildSpec.cooler[b.cooler]];
+ const load=vals.reduce((n,x)=>n+(x?.w||0),0); const recommended=Math.ceil((load+35)*1.25/50)*50; const psuW=buildSpec.psu[b.psu]?.w||0; const total=vals.reduce((n,x)=>n+(x?.p||0),0);
+ document.getElementById('wattsNow').textContent=load?`${load} W`:'0 W';document.getElementById('psuNeed').textContent=load?`Fonte recomendada: ~${recommended} W`:'Selecione as peças';document.getElementById('headroom').textContent=psuW?`${Math.max(psuW-load,0)} W de folga`:'—';
+ const pct=psuW?Math.min(100,(load/psuW)*100):0;document.getElementById('powerBar').style.width=pct+'%';const pb=document.getElementById('powerBadge');pb.textContent=!psuW?'—':(psuW>=recommended?'Fonte adequada':'Fonte insuficiente');pb.className='compat-badge '+(!psuW?'':psuW>=recommended?'ok':'bad');
+ const checks=compatibility();document.getElementById('checks').innerHTML=checks.length?checks.map(x=>`<div class="check ${x.c}">${x.t}</div>`).join(''):'<div class="check">Selecione peças para iniciar a análise.</div>';
+ const bad=checks.some(x=>x.c==='bad') || (psuW&&psuW<recommended);const cb=document.getElementById('compatBadge');cb.textContent=checks.length?(!bad?'Compatível':'Revisar montagem'):'Aguardando';cb.className='compat-badge '+(checks.length?(!bad?'ok':'bad'):'');document.getElementById('buildTotal').textContent=money(total);
+ document.querySelectorAll('.builder-grid select').forEach(sel=>{const key=sel.id.slice(1,2).toLowerCase()+sel.id.slice(2);const spec=buildSpec[key];const price=spec?.[sel.value]?.p;const el=document.getElementById(sel.id+'Price');if(el)el.textContent=sel.value?money(price):'—';});
+ document.getElementById('buildChips').innerHTML=Object.entries(b).filter(([,v])=>v).map(([k,v])=>`<span class="chip">${esc(v)}</span>`).join('')||'<span class="muted">Nenhuma peça selecionada.</span>';
+}
+function initBuilder(){enrichBuildData();optsFor('bCpu',buildSpec.cpu,'Escolha um CPU');optsFor('bGpu',buildSpec.gpu,'Escolha uma GPU');optsFor('bMobo',buildSpec.mobo,'Escolha uma placa-mãe');optsFor('bRam',buildSpec.ram,'Escolha a memória');optsFor('bStorage',buildSpec.storage,'Escolha o armazenamento');optsFor('bPsu',buildSpec.psu,'Escolha a fonte');optsFor('bCooler',buildSpec.cooler,'Escolha o cooler');document.querySelectorAll('.builder-grid select').forEach(sel=>sel.addEventListener('change',updateBuilder));document.getElementById('clearBuild').addEventListener('click',()=>{document.querySelectorAll('.builder-grid select').forEach(s=>s.value='');updateBuilder()});document.getElementById('shareBuild').addEventListener('click',async()=>{const b=buildSelected();const txt='Hardware Compare — minha configuração:\n'+Object.entries(b).filter(([,v])=>v).map(([k,v])=>`${k}: ${v}`).join('\n');try{await navigator.clipboard.writeText(txt);document.getElementById('shareBuild').textContent='Copiado ✓';setTimeout(()=>document.getElementById('shareBuild').textContent='Copiar configuração',1300)}catch(e){alert(txt)}});updateBuilder()}
+topnav();initBuilder();render();
+</script></body></html>
